@@ -621,22 +621,13 @@ hooks = [
     ],
   },
   {
-    'name': 'linux_sysroot_x64',
+    'name': 'linux_sysroot',
     'pattern': '.',
     'condition': 'download_linux_deps',
     'action': [
       'python',
       'src/build/linux/sysroot_scripts/install-sysroot.py',
       '--arch=x64'],
-  },
-  {
-    'name': 'linux_sysroot_arm64',
-    'pattern': '.',
-    'condition': 'download_linux_deps',
-    'action': [
-      'python',
-      'src/build/linux/sysroot_scripts/install-sysroot.py',
-      '--arch=arm64'],
   },
   {
     'name': 'dart package config',
